@@ -11,6 +11,13 @@ const galleryLst = document.getElementById('gallery-list');
 
 const imagesAPI = new ImageApiService();
 
+// simpleLightbox
+const gal = new SimpleLightbox('.gallery a', {
+  captions: true,
+  captionsData: 'alt',
+  captionsDelay: 250,
+})
+
 // inf scroll
 const target = document.getElementById('guard');
 
@@ -25,15 +32,14 @@ const observer = new IntersectionObserver(loadMore, options)
 function loadMore(entries, observer) {
   entries.forEach(async (entry) => {
     if (entry.isIntersecting) {
-      console.log("control")
       imagesAPI.incrementPage();
       const { hits, totalHits } = await imagesAPI.fetchImagesByQuery();
       renderGallery(hits); 
+      gal.refresh();
       if (hits.length * imagesAPI.page >= totalHits) { observer.unobserve(target) };
     }
   })
 }
-
 
 function renderGallery(data) {
   galleryLst.insertAdjacentHTML("beforeend", createCardsMarkup(data));
@@ -53,13 +59,10 @@ async function onInputSearch(e) {
   imagesAPI.query = value;
   const { hits } = await imagesAPI.fetchImagesByQuery();
   renderGallery(hits);
-
-
-  const gal = new SimpleLightbox('.gallery a', {
-    captions: true,
-    captionsData: 'alt',
-    captionsDelay: 250,
-  })
+  gal.refresh()
 }
+
+
+
 
 formInput.addEventListener('submit', onInputSearch);
