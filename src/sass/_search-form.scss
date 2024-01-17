@@ -1,0 +1,30 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+.search-input{
+  width: 300px;
+  height: 60px;
+  border: 1px solid #2196f3;
+  border-radius: 6px;
+  padding-left: 10px;
+
+  font-weight: 400;
+  font-size: 30px;
+  color: inherit;
+
+  background-color: transparent;
+}
+
+.search-input:focus {
+  border-color: #2196f3;
+  outline-color: #2196f3;
+  outline-style: groove;
+}
+
+.search-input::placeholder {
+  color: #2196f3;
+}
