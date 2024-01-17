@@ -29,4 +29,4 @@ var t=globalThis;const e=document.getElementById("theme-switch-toggle"),o=docume
     </div>
   </div>
   </li>`).join("")),N.observe(O)}async function b(t){t.preventDefault(),C.innerHTML="";let e=t.target.elements.query.value.trim();if(!e)return;v.query=e;let{hits:o}=await v.fetchImagesByQuery();w(o),y.refresh()}g.addEventListener("submit",b);
-//# sourceMappingURL=index.e345b536.js.map
+//# sourceMappingURL=index.d04262e6.js.map
