@@ -29,4 +29,4 @@ var t=globalThis;const e=document.getElementById("theme-switch-toggle"),o=docume
     </div>
   </div>
   </li>`).join("")),O.observe(y)}async function w(t){t.preventDefault(),C.innerHTML="";let e=t.target.elements.query.value.trim();if(!e)return;v.query=e;let{hits:o}=await v.fetchImagesByQuery();N(o),new(a&&a.__esModule?a.default:a)(".gallery a",{captions:!0,captionsData:"alt",captionsDelay:250})}g.addEventListener("submit",w),console.log("hello");
-//# sourceMappingURL=index.36be1635.js.map
+//# sourceMappingURL=index.cf38ba4f.js.map
