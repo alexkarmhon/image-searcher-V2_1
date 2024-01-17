@@ -28,5 +28,5 @@ var t=globalThis;const e=document.getElementById("theme-switch-toggle"),o=docume
       </p>
     </div>
   </div>
-  </li>`).join("")),O.observe(y)}async function w(t){t.preventDefault(),C.innerHTML="";let e=t.target.elements.query.value.trim();if(!e)return;v.query=e;let{hits:o}=await v.fetchImagesByQuery();N(o),new(a&&a.__esModule?a.default:a)(".gallery a",{captions:!0,captionsData:"alt",captionsDelay:250})}g.addEventListener("submit",w),console.log("hello");
-//# sourceMappingURL=index.afcc45a6.js.map
+  </li>`).join("")),O.observe(y)}async function w(t){t.preventDefault(),C.innerHTML="";let e=t.target.elements.query.value.trim();if(!e)return;v.query=e;let{hits:o}=await v.fetchImagesByQuery();N(o),new(a&&a.__esModule?a.default:a)(".gallery a",{captions:!0,captionsData:"alt",captionsDelay:250})}g.addEventListener("submit",w);
+//# sourceMappingURL=index.670f6e0b.js.map
