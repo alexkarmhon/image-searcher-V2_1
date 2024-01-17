@@ -25,7 +25,6 @@ const observer = new IntersectionObserver(loadMore, options)
 function loadMore(entries, observer) {
   entries.forEach(async (entry) => {
     if (entry.isIntersecting) {
-      console.log("control")
       imagesAPI.incrementPage();
       const { hits, totalHits } = await imagesAPI.fetchImagesByQuery();
       renderGallery(hits); 
