@@ -29,4 +29,4 @@ var t=globalThis;const e=document.getElementById("theme-switch-toggle"),o=docume
     </div>
   </div>
   </li>`).join("")),new(a&&a.__esModule?a.default:a)(".gallery a",{captions:!0,captionsData:"alt",captionsDelay:250})}g.addEventListener("submit",y),console.log("hello");
-//# sourceMappingURL=index.1c15b99b.js.map
+//# sourceMappingURL=index.30fc80a7.js.map
